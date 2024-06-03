@@ -4,8 +4,7 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
-const name = 'Emil D\'Hauwe';
-export const siteTitle = 'Next.js Sample Website';
+export const siteTitle = 'What quark are you?';
 
 export default function Layout({ children, home }) {
   return (

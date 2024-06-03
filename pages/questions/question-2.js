@@ -22,7 +22,7 @@ export default function Question1() {
         <title>Question 2</title>
       </Head>
       <h1>Question 2</h1>
-      <RadioSelector options={questions} onOptionChange={handleOptionChange}/>
+      <RadioSelector options={questions} onOptionChange={handleOptionChange} />
       <br />
       <Link
         href={{
@@ -32,11 +32,11 @@ export default function Question1() {
             answer2: selectedOption
           }
         }}
-        style={{position: 'relative', top: '-10px', visibility: selectedOption === "" ? 'hidden' : 'visible'}}
+        style={{ position: 'relative', top: '-10px', visibility: selectedOption === "" ? 'hidden' : 'visible' }}
       >
         Next Question
       </Link>
-      
+
     </Layout>
   );
 }

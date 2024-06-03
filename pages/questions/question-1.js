@@ -6,8 +6,11 @@ import RadioSelector from '../../components/RadioSelector';
 
 export default function Question1() {
   const questions = ['test1', 'test2', 'test3', 'test4'];
+
+  //Code ontvangst voorbereiden
   const [selectedOption, setSelectedOption] = useState("");
 
+  //Code ontvangst
   const handleOptionChange = (newOption) => {
     setSelectedOption(newOption);
   }
@@ -18,7 +21,7 @@ export default function Question1() {
         <title>Question 1</title>
       </Head>
       <h1>Question 1</h1>
-      <RadioSelector options={questions} onOptionChange={handleOptionChange}/>
+      <RadioSelector options={questions} onOptionChange={handleOptionChange} />
       <br />
       <Link
         href={{
@@ -27,11 +30,11 @@ export default function Question1() {
             answer1: selectedOption
           }
         }}
-        style={{position: 'relative', top: '-10px', visibility: selectedOption === "" ? 'hidden' : 'visible'}}
+        style={{ position: 'relative', top: '-10px', visibility: selectedOption === "" ? 'hidden' : 'visible' }}
       >
         Next Question
       </Link>
-      
+
     </Layout>
   );
 }
