@@ -1,7 +1,5 @@
 html,
 body {
-  padding: 0;
-  margin: auto;
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -17,6 +15,7 @@ body {
   line-height: 1.6;
   font-size: 18px;
   text-align: center;
+
 }
 
 * {

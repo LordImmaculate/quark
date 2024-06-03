@@ -5,8 +5,13 @@ import Layout, { siteTitle } from '../../components/layout';
 import RadioSelector from '../../components/RadioSelector';
 import { useSearchParams } from 'next/navigation'
 
-export default function Question1() {
-  const questions = ['test1', 'test2', 'test3', 'test4'];
+export default function Question2() {
+  const questions = ["Competitive sports or games",
+  "Puzzles and brain teasers",
+  "Creative arts or crafts",
+  "Reading or quiet hobbies",
+  "Socializing with friends",
+  "Solo adventures or exploring new places"];
   const [selectedOption, setSelectedOption] = useState("");
   const searchParams = useSearchParams()
   const answer1 = searchParams.get('answer1')
@@ -21,7 +26,7 @@ export default function Question1() {
       <Head>
         <title>Question 2</title>
       </Head>
-      <h1>Question 2</h1>
+      <h1>What is your favorite type of activity?</h1>
       <RadioSelector options={questions} onOptionChange={handleOptionChange} />
       <br />
       <Link
