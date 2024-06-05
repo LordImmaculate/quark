@@ -4,31 +4,30 @@ import Layout, { siteTitle } from '../components/layout';
 import { useSearchParams } from 'next/navigation'
 
 export default function Finish() {
-    const searchParams = useSearchParams()
-    const answer1 = searchParams.get('answer1')
-    const answer2 = searchParams.get('answer2')
-    const answer3 = searchParams.get('answer3')
-    const answer4 = searchParams.get('answer4')
-    const answer5 = searchParams.get('answer5')
-    const answer6 = searchParams.get('answer6')
-    const answer7 = searchParams.get('answer7')
-    const answer8 = searchParams.get('answer8')
-    const answer9 = searchParams.get('answer9')
-    const answer10 = searchParams.get('answer10')
-    const array = [answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer9, answer10];
-
-    const frequencyMap = {};
-    let maxCount = 0;
-    let mostCommonNumber;
+    const searchParams = useSearchParams();
+    const results = searchParams.get('results');
     let quark = "";
 
-    array.forEach(num => {
-        frequencyMap[num] = (frequencyMap[num] || 0) + 1;
-        if (frequencyMap[num] > maxCount) {
-            maxCount = frequencyMap[num];
-            mostCommonNumber = num;
+    const frequencyMap = {};
+    for (let i = 0; i < results.length; i++) {
+        const number = results[i];
+        if (frequencyMap[number] === undefined) {
+            frequencyMap[number] = 1;
+        } else {
+            frequencyMap[number]++;
         }
-    });
+    }
+
+    let mostCommonNumber = null;
+    let maxCount = 0;
+    for (const number in frequencyMap) {
+        if (frequencyMap[number] > maxCount) {
+            mostCommonNumber = number;
+            maxCount = frequencyMap[number];
+        }
+    }
+
+
 
     console.log(`The most common number is ${mostCommonNumber} with ${maxCount} occurrences.`);
 

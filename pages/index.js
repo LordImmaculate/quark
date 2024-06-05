@@ -11,7 +11,7 @@ export default function Home() {
       </Head>
       <section className={utilStyles.headingMd}>
         <h1>Personality Quiz</h1>
-        <Link href="/questions/question-1">Take the test</Link>
+        <Link href="/questionmain">Take the test</Link>
       </section>
     </Layout>
   );

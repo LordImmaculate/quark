@@ -1,9 +1,4 @@
-import RadioSelector from "../../components/RadioSelector";
-import { useState } from 'react';
-import Layout, { siteTitle } from '../../components/layout';
-import { ACTION_REFRESH } from "next/dist/client/components/router-reducer/router-reducer-types";
-let question = 0;
-const questions = [
+export const questions = [
     {
         question: "How do you usually approach challenges?",
         answers: [
@@ -115,29 +110,3 @@ const questions = [
         ]
     }
 ];
-
-export default function QuestionMain() {
-    const [selectedOption, setSelectedOption] = useState("");
-    const handleOptionChange = (newOption) => {
-        setSelectedOption(newOption);
-    }
-
-    const NextQuestion = () => {
-        if (question == questions.entries.length - 1) {
-        } else {
-            question = question + 1;
-        }
-    }
-
-
-    let title = questions[question].question;
-    return (
-        <Layout>
-            <h1>{title}</h1>
-            <div style={{ margin: 'auto' }}>
-                <RadioSelector options={questions[question].answers} onOptionChange={handleOptionChange} />
-            </div>
-            <button onClick={NextQuestion}>Next Question</button>
-        </Layout>
-    );
-}

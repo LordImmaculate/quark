@@ -37,3 +37,14 @@ img {
   max-width: 100%;
   display: block;
 }
+
+button {
+  background: transparent;
+  border: transparent;
+  color: #0070f3;
+  font-size: 18px;
+}
+
+button:hover {
+  text-decoration: underline;
+}

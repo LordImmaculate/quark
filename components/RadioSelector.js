@@ -3,7 +3,6 @@ import { useState } from 'react';
 export default function RadioSelector({ options, onOptionChange }) {
     const [selectedOption, setSelectedOption] = useState("");
     const [selectedIndex, setSelectedIndex] = useState("");
-    console.log(selectedIndex);
 
     //Stuur code door naar parent
     const handleChange = (event) => {
