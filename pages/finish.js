@@ -6,6 +6,18 @@ import { useSearchParams } from 'next/navigation'
 export default function Finish() {
     const searchParams = useSearchParams();
     const results = searchParams.get('results');
+    if (!results) {
+        return (
+            <Layout>
+                <Head>
+                    <title>Finish</title>
+                </Head>
+                <h1>Finish</h1>
+                <h2>Results:</h2>
+                <h2>There are no results to display.</h2>
+            </Layout>
+        );
+    }
     let quark = "";
 
     const frequencyMap = {};
