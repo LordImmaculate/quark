@@ -1,3 +1,5 @@
+import React from 'react'
+
 export const questions = [
     {
         question: "How do you usually approach challenges?",
@@ -110,3 +112,14 @@ export const questions = [
         ]
     }
 ];
+
+function Questions() {
+    return (
+      <div>
+        <h1>Questions Page</h1>
+        <p>You shouldn't really be here</p>
+      </div>
+    );
+  }
+  
+  export default Questions;
